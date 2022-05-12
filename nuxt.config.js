@@ -1,5 +1,8 @@
 const environment = process.env.NODE_ENV;
 const envSettings = require(`./env.${environment}.js`);
+console.log(process.env)
+console.log(environment)
+console.log(envSettings)
 
 export default {
     env: envSettings,
