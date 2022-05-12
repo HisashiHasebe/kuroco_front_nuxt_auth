@@ -1,5 +1,5 @@
 module.exports = {
-    META_TITLE: 'Nuxt Auth',
+    META_TITLE: '[本番]Nuxt Auth',
     ROBOTS: 'index',
-    BASE_URL: 'https://nuxt-auth.a.kuroco.app'
+    BASE_URL: 'https://hasebetest-front-nuxt-auth.g.kuroco.app'
 };

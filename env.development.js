@@ -1,5 +1,5 @@
 module.exports = {
-    META_TITLE: '[DEV]Nuxt Auth',
+    META_TITLE: '[開発]Nuxt Auth',
     ROBOTS: 'noindex',
-    BASE_URL: 'https://dev-nuxt-auth.a.kuroco.app'
+    BASE_URL: 'https://hasebetest-front-nuxt-auth.g.kuroco.app'
 };

@@ -2,11 +2,8 @@ name: Build and deploy to Kuroco front
 on:
   push:
     branches:
-      - main
-  issue_comment:
-    types: [created, edited]
+      - develop
   workflow_dispatch:
-    branches: [ main ]
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -31,7 +28,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build-prod
+        run: npm run build
       - name: Generate
         run: npm run generate
       - name: Archive Production Artifact
@@ -57,6 +54,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+      - name: Copy kuroco_front.json
+        run:  cp src/static/kuroco_front_dev.json src/static/kuroco_front.json 
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
@@ -64,7 +63,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build
-        run: npm run build-prod
+        run: npm run build
       - name: Generate
         run: npm run generate
       - name: Archive Production Artifact
